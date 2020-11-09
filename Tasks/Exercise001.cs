@@ -15,13 +15,13 @@ namespace TechReturners.Tasks
     {
         public static int Singles(List<int> source)
         {
-            //Select distinct values
+            //Select distinct numbers
             var distinctNumbers = source
                 .GroupBy(n => n)
                 .Where(n => n.Count() == 1)
                 .SelectMany(n => n);
 
-            //Sum distinct values
+            //Sum distinct numbers
             Console.WriteLine(distinctNumbers);
             return distinctNumbers.Sum();
 
